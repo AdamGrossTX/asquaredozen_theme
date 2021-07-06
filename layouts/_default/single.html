@@ -1,0 +1,26 @@
+{{ define "article" }}
+		<article class="post type-post status-publish format-standard has-post-thumbnail hentry">
+			<div class="post-header">
+				<h1>{{ .Title }}</h1>
+				<span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+			</div>
+			<div class="post-entry">
+				{{ .Content }}
+			</div>
+			{{ with .Params.tags }}
+			<div class="post-share">
+				<div class="post-share-box share-comments">
+				</div>
+			</div>
+			<div class="post-author">
+			</div>
+			<div class="post-comments" id="comments">
+			</div>
+			{{ end }}
+			{{ with .Site.DisqusShortname }}
+			<div>
+				{{ template "_internal/disqus.html" . }}
+			</div>
+			{{ end }}
+		</article>
+{{ end }}

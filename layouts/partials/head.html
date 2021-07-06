@@ -1,0 +1,26 @@
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keyword"  content="{{ .Site.Params.keyword }}">
+        <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
+        <title>{{ if .Title }}{{ .Title }}-{{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
+
+        {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+        {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+        <link rel="canonical" href="{{ .RelPermalink | relURL }}">
+        <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+        <!-- Custom Fonts -->
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+        <!--  Custom CSS  -->
+        {{ range .Site.Params.custom_css -}}
+        <link rel="stylesheet" href="{{ . | absURL }}">
+        {{- end }}
+
+        {{ with .OutputFormats.Get "RSS" -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+        {{- end }}
+    </head>

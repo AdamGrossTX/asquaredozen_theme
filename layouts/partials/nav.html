@@ -1,0 +1,16 @@
+<div id="top-bar">
+    <div class="container">
+        <div id="nav-wrapper">
+                <ul class="menu" id="menu-top-menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                        <a href="{{ "/" | relLangURL }}">Home</a>
+                    </li>
+                {{ range .Site.Menus.main }}
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                    </li>
+                {{ end }}
+                </ul>
+        </div>
+    </div>
+</div>
