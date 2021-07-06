@@ -1,12 +1,12 @@
-name = "Blank"
-license = "MIT"
-licenselink = "https://github.com/vimux/blank/blob/master/LICENSE"
-description = "Starter Hugo theme for developers."
-homepage = "https://github.com/vimux/blank/"
-tags = ["blog", "plain", "blank", "starter", "development"]
+name = "asquaredozen_theme"
+license = "GNU"
+licenselink = "https://github.com/AdamGrossTX/asquaredozen_theme/blob/master/LICENSE"
+description = "Hugo Theme for www.asquaredozen.com"
+homepage = "https://github.com/AdamGrossTX/asquaredozen_theme/"
+tags = ["blog"]
 features = ["blog"]
 min_version = "0.20"
 
 [author]
-  name = "Vimux"
-  homepage = "https://github.com/vimux"
+  name = "AdamGrossTX"
+  homepage = "https://github.com/AdamGrossTX"
