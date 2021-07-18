@@ -1,3 +1,4 @@
+<!-- navbar start -->
 <div id="top-bar">
     <div class="container">
         <div id="nav-wrapper">
@@ -5,11 +6,36 @@
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
                         <a href="{{ "/" | relLangURL }}">Home</a>
                     </li>
-                {{ range .Site.Menus.main }}
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }} menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                                <a href="#">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                                <ul class="sub-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                                    {{ range .Children }}
+                                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }} menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                                            <a href="{{ .URL }}">{{ .Name }}</a>
+                                        </li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                        {{ else }}
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
+                                <a href="{{ .URL }}">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                <!--{{ range .Site.Menus.main }}
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home">
                         <a href="{{ .URL | relURL }}">{{ .Name }}</a>
                     </li>
-                {{ end }}
+                {{ end }}-->
                 </ul>
         </div>
     </div>

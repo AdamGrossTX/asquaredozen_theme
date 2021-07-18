@@ -9,6 +9,9 @@
         {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
         {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 
+        {{ template "_internal/google_analytics.html" . }}
+        {{ template "_internal/twitter_cards.html" . }}
+
         <link rel="canonical" href="{{ .RelPermalink | relURL }}">
         <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
         <link rel="stylesheet" href="{{ "css/code.css" | relURL }}">
