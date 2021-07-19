@@ -258,14 +258,11 @@ a {
 	border-bottom:none;
 }
 #header, #header.noslider {
-	padding-top:50px;
 	text-align:center;
 	border-bottom:1px dashed #eee;
 	margin-bottom:60px;
 }
 #logo {
-	padding-top:56px;
-	padding-bottom:56px;
 }
 #logo img {
 	max-width:100%;
@@ -1311,17 +1308,10 @@ a.more-link:hover {
 }
 
 /* Search Widget **********/
-#searchform input#s {
+#searchform input#q {
 	border: 1px solid #e5e5e5;
     background: #fff url(img/searchsubmit.png) no-repeat 96% 13px;
     padding: 14px 14px;
-    font-size: 10px;
-    font-style: italic;
-    color: #999;
-    font-weight: lighter;
-    width: 280px;
-    letter-spacing: 1.25px;
-    font-family: 'Playfair Display', serif;
 }
 
 .widget #searchform #s:focus { outline:none; }
