@@ -5,7 +5,7 @@
         {{ if .Params.featured_image }}
         <div class="post-img">
             <a href="{{ .Permalink }}">
-                <img width="520" height="400" src="{{ .Params.featured_image }}">
+                <img width="520" height="400" src="{{ .Permalink }}{{ .Params.featured_image }}">
             </a>
         </div>
         {{ end }}
