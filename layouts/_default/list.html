@@ -1,4 +1,5 @@
-{{ define "article" }}
+{{ define "main" }}
+<div id="main">
 	{{ $paginator := .Paginate (where (where (where .Site.Pages "Type" "post") "IsPage" true) "Draft" "!=" true) }}
 	{{ range $index, $element := $.Paginator.Pages }}
     <article class="list-item">
@@ -35,4 +36,6 @@
     </article>
     {{ end }}
     {{ partial "pagination.html" . }}
+</div>
+{{ partial "sidebar.html" . }}
 {{ end }}
