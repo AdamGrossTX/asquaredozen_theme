@@ -74,6 +74,27 @@ a {
 	float:right;
 }
 
+div .image{
+	margin-bottom:1.2em
+}
+
+figure {
+	display: table;
+	margin: 5px auto 5px auto;
+	clear: both;
+}
+
+figcaption {
+    text-align: center;
+    color: #888888;
+    font-weight: bold;
+    font-style: italic;
+	margin-top: .5em;
+    margin-bottom: 1em;
+	/*display: table-caption;*/
+    caption-side: bottom;
+}
+
 
 /****************************************/
 /* Top Bar
