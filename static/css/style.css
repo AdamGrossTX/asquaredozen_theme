@@ -97,6 +97,31 @@ figcaption {
 
 
 /****************************************/
+/* code
+/****************************************/
+.highlight {
+    display: block !important;
+    padding: 1em !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #e8e8e8 !important;
+  }
+  
+  code {
+    background-color: #e8e8e8 !important;
+  }
+
+  .highlight code {
+    display: block;
+  }
+
+  .highlight pre {
+    display: block !important;
+    background-color: #e8e8e8 !important;
+  }
+
+
+/****************************************/
 /* Top Bar
 /****************************************/
 
@@ -1802,7 +1827,7 @@ div.wpcf7 {
 /* Slicknav CSS
 /****************************************/
 .slicknav_btn { position: relative; display: block; vertical-align: middle; float: left;  line-height: 39px; cursor: pointer;  height: 39px;}
-.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
 .slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; font-size:19px;}
 .slicknav_menu .slicknav_no-text { margin: 0 }
 .slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; }
