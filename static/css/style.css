@@ -278,10 +278,8 @@ figcaption {
 	opacity:.65;
 }
 .show-search {
-	position:absolute;
 	top:50px;
 	right:0;
-	display:none;
 	z-index:10000;
 }
 .show-search #searchform input#s {

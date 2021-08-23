@@ -33,17 +33,13 @@
                     {{ end }}
                 </ul>
         </div>
-        <div class="menu" id="menu-mobile"></div>
-    </div>
-    <div id="top-search">
-        <a href="#" class="search"><i class="fa fa-search"></i></a>
-        <div class="show-search">
-            <form role="search" method="get" action="https://www.google.com/search" id="searchform">
-                <input type="search" placeholder="Search and hit enter..." value="" name="s" id="s" title="Search and hit enter...">
-                <input type="hidden" name="sitesearch" value="asquaredozen.com">
-                <button type="submit" value="Search"/>
-            </form>
+        <div id="top-search">
+            <a href="#" class="search"><i class="fa fa-search"></i></a>
+            <div class="show-search">
+                {{ partial "search.html" . }}
+            </div>
         </div>
+        <div class="menu" id="menu-mobile"></div>
     </div>
 </div>
 <!-- nav end -->
